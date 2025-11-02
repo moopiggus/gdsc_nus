@@ -155,10 +155,13 @@ export default function HomePage() {
 function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-slate-950/70 backdrop-blur border-b border-white-200">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-2">
         <a href="#home" className="inline-flex items-center gap-2">
-          <GdscDots />
-          <span className="font-bold">GDSC NUS</span>
+          <img
+            src="/GDSC_Logo.png"
+            alt="GDSC NUS Logo"
+            className="h-8 w-auto"
+          />
         </a>
         <div className="hidden gap-6 text-sm text-slate-300 md:flex">
           <a className="hover:text-white" href="#about">
@@ -299,10 +302,9 @@ function Hero() {
       <div className="md:justify-self-end">
         <div className="flex h-60 w-[360px] items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-500/15 to-sky-400/10 p-6 text-center md:h-64">
           <div>
-            <div className="font-semibold">Add a club photo</div>
+            <div className="font-semibold">Community Photo</div>
             <p className="mt-1 text-xs text-slate-400">
-              Replace this box with an{" "}
-              <code className="font-mono">&lt;img /&gt;</code> later.
+              Add your community event photo here
             </p>
           </div>
         </div>
