@@ -9,8 +9,8 @@ export default function HomePage() {
         <About />
         <Community />
         <Events />
-         <Projects />
-         <Timeline />
+        <Projects />
+        <Timeline />
         <Testimonials />
         <Partners />
       </main>
@@ -19,143 +19,165 @@ export default function HomePage() {
   );
 }
 
-  function Projects() {
-    const projects = [
-      {
-        title: "Campus Navigator App",
-        description: "An intuitive map app to help new students navigate the NUS campus with ease.",
-        image: "/project1.png",
-      },
-      {
-        title: "Sustainability Tracker",
-        description: "A tool used to promote sustainable practices among students on campus.",
-        image: "/project2.png",
-      },
-      {
-        title: "AI-Powered Tutor",
-        description: "A personal learning assistant for students, powered by Google's AI technologies.",
-        image: "/project3.png",
-      },
-    ];
+function Projects() {
+  const projects = [
+    {
+      title: "Campus Navigator App",
+      description:
+        "An intuitive map app to help new students navigate the NUS campus with ease.",
+      image: "/project1.png",
+    },
+    {
+      title: "Sustainability Tracker",
+      description:
+        "A tool used to promote sustainable practices among students on campus.",
+      image: "/project2.png",
+    },
+    {
+      title: "AI-Powered Tutor",
+      description:
+        "A personal learning assistant for students, powered by Google's AI technologies.",
+      image: "/project3.png",
+    },
+  ];
 
-    return (
-      <section id="projects" className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-2xl font-semibold">Our Projects</h2>
-        <div className="mt-5 grid gap-6 md:grid-cols-3">
-          {projects.map((project, i) => (
-            <article key={i} className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="font-semibold">{project.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{project.description}</p>
-                <a
-                  href="#details"
-                  className="mt-3 inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-400"
-                >
-                  View Details →
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    );
-  }
+  return (
+    <section id="projects" className="mx-auto max-w-6xl px-4 py-10">
+      <h2 className="text-2xl font-semibold">Our Projects</h2>
+      <div className="mt-5 grid gap-6 md:grid-cols-3">
+        {projects.map((project, i) => (
+          <article
+            key={i}
+            className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="font-semibold">{project.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                {project.description}
+              </p>
+              <a
+                href="#details"
+                className="mt-3 inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-400"
+              >
+                View Details →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
 
-  function Timeline() {
-    const steps = [
-      {
-        title: "Initial Consultation",
-        description: "We start by understanding your needs and goals.",
-        icon: "📋",
-      },
-      {
-        title: "Project Scoping & Proposal",
-        description: "We define the project scope and deliver a detailed proposal.",
-        icon: "📝",
-      },
-      {
-        title: "Development Sprints",
-        description: "Our team works in agile sprints to build and iterate.",
-        icon: "💻",
-      },
-      {
-        title: "Final Showcase & Handover",
-        description: "We present the final project and hand over all assets.",
-        icon: "🎉",
-      },
-    ];
-    return (
-      <section className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-2xl font-semibold">Partner With Us: Our Timeline</h2>
-        <p className="mt-2 text-slate-600">Here's how we work with our partners from idea to launch.</p>
+function Timeline() {
+  const steps = [
+    {
+      title: "Initial Consultation",
+      description: "We start by understanding your needs and goals.",
+      icon: "📋",
+    },
+    {
+      title: "Project Scoping & Proposal",
+      description:
+        "We define the project scope and deliver a detailed proposal.",
+      icon: "📝",
+    },
+    {
+      title: "Development Sprints",
+      description: "Our team works in agile sprints to build and iterate.",
+      icon: "💻",
+    },
+    {
+      title: "Final Showcase & Handover",
+      description: "We present the final project and hand over all assets.",
+      icon: "🎉",
+    },
+  ];
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-10">
+      <h2 className="text-2xl font-semibold">Partner With Us: Our Timeline</h2>
+      <p className="mt-2 text-slate-600">
+        Here's how we work with our partners from idea to launch.
+      </p>
 
-        {/* Timeline container */}
-        <div className="relative mt-8">
-          {/* Center vertical line (hidden on small screens) */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-200" />
+      {/* Timeline container */}
+      <div className="relative mt-8">
+        {/* Center vertical line (hidden on small screens) */}
+        <div className="hidden md:block absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-200" />
 
-          <div className="space-y-12">
-            {steps.map((step, i) => {
-              const isLeft = i % 2 === 0;
-              return (
+        <div className="space-y-12">
+          {steps.map((step, i) => {
+            const isLeft = i % 2 === 0;
+            return (
+              <div
+                key={i}
+                className="flex flex-col items-start md:flex-row md:items-center"
+              >
+                {/* Left side card (or spacer on the right) */}
                 <div
-                  key={i}
-                  className="flex flex-col items-start md:flex-row md:items-center"
+                  className={`md:w-1/2 md:px-8 ${
+                    isLeft ? "md:pr-8 md:flex md:justify-end" : "md:pl-8"
+                  } w-full`}
                 >
-                  {/* Left side card (or spacer on the right) */}
-                  <div
-                    className={`md:w-1/2 md:px-8 ${
-                      isLeft ? "md:pr-8 md:flex md:justify-end" : "md:pl-8"
-                    } w-full`}
-                  >
-                    {isLeft && (
-                      <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
-                        <h3 className="font-semibold text-slate-800">{step.title}</h3>
-                        <p className="mt-1 text-sm text-slate-600">{step.description}</p>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Center marker */}
-                  <div className="relative flex items-center justify-center md:mx-0 mx-auto z-10">
-                    <div className="h-0 w-0 md:h-auto md:w-auto" />
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow`}> 
-                      <span className="text-base">{step.icon}</span>
+                  {isLeft && (
+                    <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
+                      <h3 className="font-semibold text-slate-800">
+                        {step.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-600">
+                        {step.description}
+                      </p>
                     </div>
-                  </div>
+                  )}
+                </div>
 
-                  {/* Right side card (or spacer on the left) */}
+                {/* Center marker */}
+                <div className="relative flex items-center justify-center md:mx-0 mx-auto z-10">
+                  <div className="h-0 w-0 md:h-auto md:w-auto" />
                   <div
-                    className={`md:w-1/2 md:px-8 ${
-                      !isLeft ? "md:pl-8 md:flex md:justify-start" : "md:pr-8"
-                    } w-full mt-4 md:mt-0`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow`}
                   >
-                    {!isLeft && (
-                      <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
-                        <h3 className="font-semibold text-slate-800">{step.title}</h3>
-                        <p className="mt-1 text-sm text-slate-600">{step.description}</p>
-                      </div>
-                    )}
+                    <span className="text-base">{step.icon}</span>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+
+                {/* Right side card (or spacer on the left) */}
+                <div
+                  className={`md:w-1/2 md:px-8 ${
+                    !isLeft ? "md:pl-8 md:flex md:justify-start" : "md:pr-8"
+                  } w-full mt-4 md:mt-0`}
+                >
+                  {!isLeft && (
+                    <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
+                      <h3 className="font-semibold text-slate-800">
+                        {step.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-600">
+                        {step.description}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}
+
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-slate-950/70 backdrop-blur border-b border-white-200">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-2">
+    <header className="sticky top-0 z-50 bg-slate-100 border-b border-slate-200">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
         <a href="#home" className="inline-flex items-center gap-2">
           <img
             src="/GDSC_Logo.png"
@@ -163,23 +185,23 @@ function SiteHeader() {
             className="h-8 w-auto"
           />
         </a>
-        <div className="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a className="hover:text-white" href="#about">
+        <div className="hidden gap-6 text-sm text-slate-700 md:flex">
+          <a className="hover:text-slate-900" href="#about">
             About
           </a>
-          <a className="hover:text-white" href="#community">
-            Community
-          </a>
-          <a className="hover:text-white" href="#events">
+          <a className="hover:text-slate-900" href="#community">
             Events
           </a>
-          <a className="hover:text-white" href="#projects">
+          <a className="hover:text-slate-900" href="#events">
+            Meet The Team
+          </a>
+          <a className="hover:text-slate-900" href="#projects">
             Projects
           </a>
         </div>
         <a
           href="#join"
-          className="inline-flex items-center rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow hover:bg-blue-400"
+          className="inline-flex items-center rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-blue-600"
         >
           Join Upcoming Events
         </a>
@@ -215,7 +237,9 @@ function Testimonials() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
-      <h2 className="text-2xl font-semibold text-center">What Our Members Say</h2>
+      <h2 className="text-2xl font-semibold text-center">
+        What Our Members Say
+      </h2>
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         {items.map((it, i) => (
           <blockquote
@@ -255,7 +279,10 @@ function Partners() {
       <h2 className="text-2xl font-semibold text-center">Our Partners</h2>
       <div className="mt-8 flex items-center justify-between gap-6 overflow-x-auto px-4">
         {logos.map((l, i) => (
-          <div key={i} className="flex shrink-0 items-center justify-center px-4">
+          <div
+            key={i}
+            className="flex shrink-0 items-center justify-center px-4"
+          >
             <img src={l.src} alt={l.alt} className="h-16 object-contain" />
           </div>
         ))}
@@ -264,49 +291,40 @@ function Partners() {
   );
 }
 
-
 function Hero() {
   return (
-    <section
-      id="home"
-      className="relative isolate mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-14 md:grid-cols-[1.3fr_.9fr]"
-    >
-      {/* radial accents */}
-      <div className="pointer-events-none absolute -top-24 right-0 -z-10 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 top-10 -z-10 h-56 w-56 rounded-full bg-sky-400/20 blur-3xl" />
-
-      <div>
-        <h1 className="bg-gradient-to-r from-sky-400 via-emerald-300 to-amber-300 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
-          Build. Learn. Connect.
-        </h1>
-        <p className="mt-3 max-w-2xl text-slate-300">
-          Welcome to the Google Developer Student Club at the National
-          University of Singapore. Join us to learn, build, and grow with a
-          passionate community of developers.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <a
-            href="#events"
-            className="inline-flex items-center rounded-full bg-amber-300 px-4 py-2 font-semibold text-slate-900 hover:bg-amber-200"
-          >
-            See Events
-          </a>
-          <a
-            href="#about"
-            className="inline-flex items-center rounded-full border border-white/15 px-4 py-2 font-semibold text-white hover:bg-white/5"
-          >
-            Learn More
-          </a>
+    <section id="home" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
+        {/* Left side - Text content */}
+        <div>
+          <h1 className="text-5xl tracking-tight md:text-7xl lg:text-5xl">
+            <span className="bg-gradient-to-r from-blue-500 via-emerald-500 to-amber-400 bg-clip-text text-transparent">
+              Build. Learn. Connect
+            </span>
+          </h1>
+          <p className="mt-4 text-sm text-slate-600 max-w-lg leading-relaxed md:text-base">
+            Welcome to the Google Developer Student Club at the National
+            University of Singapore. Join us to learn, build, and grow with a
+            passionate community of developers.
+          </p>
+          <div className="mt-6">
+            <a
+              href="#events"
+              className="inline-flex items-center rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-600"
+            >
+              Join Upcoming Events
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div className="md:justify-self-end">
-        <div className="flex h-60 w-[360px] items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-500/15 to-sky-400/10 p-6 text-center md:h-64">
-          <div>
-            <div className="font-semibold">Community Photo</div>
-            <p className="mt-1 text-xs text-slate-400">
-              Add your community event photo here
-            </p>
+        {/* Right side - Team photo */}
+        <div className="flex justify-center md:justify-end">
+          <div className="overflow-hidden rounded-3xl w-full max-w-md">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+              alt="GDSC NUS Team"
+              className="h-80 w-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -585,7 +603,8 @@ function Events() {
       title: "Android Dev Workshop",
       date: "Oct 28, 2024",
       tag: "Workshop",
-      description: "Join us for a hands-on workshop on building your first Android application with Kotlin.",
+      description:
+        "Join us for a hands-on workshop on building your first Android application with Kotlin.",
       color: "rose",
       icon: "📅",
     },
@@ -593,7 +612,8 @@ function Events() {
       title: "Cloud Study Jam",
       date: "Nov 15, 2024",
       tag: "Study Jam",
-      description: "A deep dive into Google Cloud Platform services. Perfect for beginners and experts alike.",
+      description:
+        "A deep dive into Google Cloud Platform services. Perfect for beginners and experts alike.",
       color: "emerald",
       icon: "☁️",
     },
@@ -601,7 +621,8 @@ function Events() {
       title: "Tech Talk: AI & ML",
       date: "Dec 05, 2024",
       tag: "Tech Talk",
-      description: "Listen to industry experts discuss the latest trends and breakthroughs in AI and Machine Learning.",
+      description:
+        "Listen to industry experts discuss the latest trends and breakthroughs in AI and Machine Learning.",
       color: "amber",
       icon: "🔊",
     },
@@ -625,12 +646,19 @@ function Events() {
               className="rounded-2xl border border-slate-100 bg-white p-6 shadow-lg"
             >
               <div className="flex items-start gap-4">
-                <div className={`flex h-12 w-12 items-center justify-center rounded-full ${colorClasses} shrink-0`} aria-hidden>
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-full ${colorClasses} shrink-0`}
+                  aria-hidden
+                >
                   <span className="text-xl">{e.icon}</span>
                 </div>
                 <div className="flex-1">
-                  <div className="text-xs font-semibold text-slate-400">{e.date}</div>
-                  <h3 className="mt-2 text-lg font-semibold text-slate-900">{e.title}</h3>
+                  <div className="text-xs font-semibold text-slate-400">
+                    {e.date}
+                  </div>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">
+                    {e.title}
+                  </h3>
                   <p className="mt-2 text-sm text-slate-600">{e.description}</p>
                 </div>
               </div>
