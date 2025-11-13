@@ -101,7 +101,7 @@ export default function Hack4GoodPage() {
           <div className="flex flex-col items-center">
             <div className="w-full rounded-2xl overflow-hidden shadow-lg mb-4">
               <img
-                src="/src/assets/events/rightpicture.png" 
+                src="/events/rightpicture.png" 
                 alt="Previous Winners"
                 className="w-full h-auto object-cover"
               />
